@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="sqlModelStoreContainer" CdmEntityContainer="sqlEntities">
+    <EntitySetMapping Name="class">
+      <EntityTypeMapping TypeName="sqlModel.class">
+        <MappingFragment StoreEntitySet="class">
+          <ScalarProperty Name="codeClass" ColumnName="codeClass" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="statusN">
+      <EntityTypeMapping TypeName="sqlModel.statusN">
+        <MappingFragment StoreEntitySet="statusN">
+          <ScalarProperty Name="codeStatus" ColumnName="codeStatus" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="techer">
+      <EntityTypeMapping TypeName="sqlModel.techer">
+        <MappingFragment StoreEntitySet="techer">
+          <ScalarProperty Name="codeTecher" ColumnName="codeTecher" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="permanent" ColumnName="permanent" />
+          <ScalarProperty Name="hour_teken_month" ColumnName="hour_teken_month" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Presence">
+      <EntityTypeMapping TypeName="sqlModel.Presence">
+        <MappingFragment StoreEntitySet="Presence">
+          <ScalarProperty Name="day" ColumnName="day" />
+          <ScalarProperty Name="statusToDay" ColumnName="statusToDay" />
+          <ScalarProperty Name="mis_Hour" ColumnName="mis_Hour" />
+          <ScalarProperty Name="dateDay" ColumnName="dateDay" />
+          <ScalarProperty Name="codeTecher" ColumnName="codeTecher" />
+          <ScalarProperty Name="codePresence" ColumnName="codePresence" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="subjectToClass">
+      <EntityTypeMapping TypeName="sqlModel.subjectToClass">
+        <MappingFragment StoreEntitySet="subjectToClass">
+          <ScalarProperty Name="group2" ColumnName="group2" />
+          <ScalarProperty Name="group1" ColumnName="group1" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="codeSubject" ColumnName="codeSubject" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Table">
+      <EntityTypeMapping TypeName="sqlModel.Table">
+        <MappingFragment StoreEntitySet="Table">
+          <ScalarProperty Name="statusToDay" ColumnName="statusToDay" />
+          <ScalarProperty Name="mis_Hour" ColumnName="mis_Hour" />
+          <ScalarProperty Name="dateDay" ColumnName="dateDay" />
+          <ScalarProperty Name="codeTecher" ColumnName="codeTecher" />
+          <ScalarProperty Name="codePresence" ColumnName="codePresence" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="schedules">
+      <EntityTypeMapping TypeName="sqlModel.schedule">
+        <MappingFragment StoreEntitySet="schedule">
+          <ScalarProperty Name="day" ColumnName="day" />
+          <ScalarProperty Name="techer" ColumnName="techer" />
+          <ScalarProperty Name="subjectIn" ColumnName="subjectIn" />
+          <ScalarProperty Name="groups" ColumnName="groups" />
+          <ScalarProperty Name="class" ColumnName="class" />
+          <ScalarProperty Name="hour_in_dey" ColumnName="hour_in_dey" />
+          <ScalarProperty Name="code_schedule" ColumnName="code_schedule" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

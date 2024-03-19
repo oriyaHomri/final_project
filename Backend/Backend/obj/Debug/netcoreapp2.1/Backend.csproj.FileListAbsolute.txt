@@ -1,0 +1,11 @@
+C:\Users\PC\Pictures\פרויקט מעוצב\AttendanceSeminar\Backend\Backend\bin\Debug\netcoreapp2.1\Backend.deps.json
+C:\Users\PC\Pictures\פרויקט מעוצב\AttendanceSeminar\Backend\Backend\bin\Debug\netcoreapp2.1\Backend.runtimeconfig.json
+C:\Users\PC\Pictures\פרויקט מעוצב\AttendanceSeminar\Backend\Backend\bin\Debug\netcoreapp2.1\Backend.runtimeconfig.dev.json
+C:\Users\PC\Pictures\פרויקט מעוצב\AttendanceSeminar\Backend\Backend\bin\Debug\netcoreapp2.1\Backend.dll
+C:\Users\PC\Pictures\פרויקט מעוצב\AttendanceSeminar\Backend\Backend\bin\Debug\netcoreapp2.1\Backend.pdb
+C:\Users\PC\Pictures\פרויקט מעוצב\AttendanceSeminar\Backend\Backend\obj\Debug\netcoreapp2.1\Backend.csproj.CoreCompileInputs.cache
+C:\Users\PC\Pictures\פרויקט מעוצב\AttendanceSeminar\Backend\Backend\obj\Debug\netcoreapp2.1\Backend.AssemblyInfoInputs.cache
+C:\Users\PC\Pictures\פרויקט מעוצב\AttendanceSeminar\Backend\Backend\obj\Debug\netcoreapp2.1\Backend.AssemblyInfo.cs
+C:\Users\PC\Pictures\פרויקט מעוצב\AttendanceSeminar\Backend\Backend\obj\Debug\netcoreapp2.1\Backend.dll
+C:\Users\PC\Pictures\פרויקט מעוצב\AttendanceSeminar\Backend\Backend\obj\Debug\netcoreapp2.1\Backend.pdb
+C:\Users\PC\Pictures\פרויקט מעוצב\AttendanceSeminar\Backend\Backend\obj\Debug\netcoreapp2.1\Backend.csprojAssemblyReference.cache

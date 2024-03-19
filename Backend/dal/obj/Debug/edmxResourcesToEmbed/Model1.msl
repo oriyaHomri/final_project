@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="VaadBayitModelStoreContainer" CdmEntityContainer="VaadBayitEntities">
+    <EntitySetMapping Name="CollectionVaad">
+      <EntityTypeMapping TypeName="VaadBayitModel.CollectionVaad">
+        <MappingFragment StoreEntitySet="CollectionVaad">
+          <ScalarProperty Name="IdCollectionVaad" ColumnName="IdCollectionVaad" />
+          <ScalarProperty Name="Details" ColumnName="Details" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="DatePayed" ColumnName="DatePayed" />
+          <ScalarProperty Name="IdTenant" ColumnName="IdTenant" />
+          <ScalarProperty Name="IdFrequency" ColumnName="IdFrequency" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Expenses">
+      <EntityTypeMapping TypeName="VaadBayitModel.Expenses">
+        <MappingFragment StoreEntitySet="Expenses">
+          <ScalarProperty Name="IdExpense" ColumnName="IdExpense" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Details" ColumnName="Details" />
+          <ScalarProperty Name="Receipt" ColumnName="Receipt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Frequencies">
+      <EntityTypeMapping TypeName="VaadBayitModel.Frequencies">
+        <MappingFragment StoreEntitySet="Frequencies">
+          <ScalarProperty Name="IdFrequency" ColumnName="IdFrequency" />
+          <ScalarProperty Name="TypeOfTasks" ColumnName="TypeOfTasks" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="Fixed" ColumnName="Fixed" />
+          <ScalarProperty Name="Details" ColumnName="Details" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FrequencyObject">
+      <EntityTypeMapping TypeName="VaadBayitModel.FrequencyObject">
+        <MappingFragment StoreEntitySet="FrequencyObject">
+          <ScalarProperty Name="IdFrequencyObject" ColumnName="IdFrequencyObject" />
+          <ScalarProperty Name="FrequencyObject1" ColumnName="FrequencyObject" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FrequencyOperator">
+      <EntityTypeMapping TypeName="VaadBayitModel.FrequencyOperator">
+        <MappingFragment StoreEntitySet="FrequencyOperator">
+          <ScalarProperty Name="IdFrequencyOperator" ColumnName="IdFrequencyOperator" />
+          <ScalarProperty Name="FrequencyOperator1" ColumnName="FrequencyOperator" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FrequencyType">
+      <EntityTypeMapping TypeName="VaadBayitModel.FrequencyType">
+        <MappingFragment StoreEntitySet="FrequencyType">
+          <ScalarProperty Name="IdFrequencyType" ColumnName="IdFrequencyType" />
+          <ScalarProperty Name="TypeOfFrequency" ColumnName="TypeOfFrequency" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Insertions">
+      <EntityTypeMapping TypeName="VaadBayitModel.Insertions">
+        <MappingFragment StoreEntitySet="Insertions">
+          <ScalarProperty Name="IdInsertion" ColumnName="IdInsertion" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Professionals">
+      <EntityTypeMapping TypeName="VaadBayitModel.Professionals">
+        <MappingFragment StoreEntitySet="Professionals">
+          <ScalarProperty Name="IdProfessional" ColumnName="IdProfessional" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="E_Mail" ColumnName="E-Mail" />
+          <ScalarProperty Name="TypeOfProfessional" ColumnName="TypeOfProfessional" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tasks">
+      <EntityTypeMapping TypeName="VaadBayitModel.Tasks">
+        <MappingFragment StoreEntitySet="Tasks">
+          <ScalarProperty Name="IdTask" ColumnName="IdTask" />
+          <ScalarProperty Name="TypeOfTask" ColumnName="TypeOfTask" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="FixedBy" ColumnName="FixedBy" />
+          <ScalarProperty Name="FixedCost" ColumnName="FixedCost" />
+          <ScalarProperty Name="FixeDate" ColumnName="FixeDate" />
+          <ScalarProperty Name="IdExpense" ColumnName="IdExpense" />
+          <ScalarProperty Name="IdFrequency" ColumnName="IdFrequency" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tenant">
+      <EntityTypeMapping TypeName="VaadBayitModel.Tenant">
+        <MappingFragment StoreEntitySet="Tenant">
+          <ScalarProperty Name="TenantCode" ColumnName="TenantCode" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Floor" ColumnName="Floor" />
+          <ScalarProperty Name="NumOfApartment" ColumnName="NumOfApartment" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="E_Mail" ColumnName="E-Mail" />
+          <ScalarProperty Name="Modifier" ColumnName="Modifier" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tenants">
+      <EntityTypeMapping TypeName="VaadBayitModel.Tenants">
+        <MappingFragment StoreEntitySet="Tenants">
+          <ScalarProperty Name="TenantCode" ColumnName="TenantCode" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Floor" ColumnName="Floor" />
+          <ScalarProperty Name="NumOfApartment" ColumnName="NumOfApartment" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="E_Mail" ColumnName="E-Mail" />
+          <ScalarProperty Name="Modifier" ColumnName="Modifier" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypeOfProfessionals">
+      <EntityTypeMapping TypeName="VaadBayitModel.TypeOfProfessionals">
+        <MappingFragment StoreEntitySet="TypeOfProfessionals">
+          <ScalarProperty Name="IdProfessional" ColumnName="IdProfessional" />
+          <ScalarProperty Name="TypeOfProfessional" ColumnName="TypeOfProfessional" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypeOfTasks">
+      <EntityTypeMapping TypeName="VaadBayitModel.TypeOfTasks">
+        <MappingFragment StoreEntitySet="TypeOfTasks">
+          <ScalarProperty Name="IdTypeOfTasks" ColumnName="IdTypeOfTasks" />
+          <ScalarProperty Name="TypeOfTask" ColumnName="TypeOfTask" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

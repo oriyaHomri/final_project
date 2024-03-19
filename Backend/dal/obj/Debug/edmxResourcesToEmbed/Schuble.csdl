@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="sqlModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="class">
+    <Key>
+      <PropertyRef Name="codeClass" />
+    </Key>
+    <Property Name="codeClass" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="schedules" Relationship="sqlModel.FK__schedule__class__0F624AF8" FromRole="class" ToRole="schedule" />
+  </EntityType>
+  <EntityType Name="statusN">
+    <Key>
+      <PropertyRef Name="codeStatus" />
+    </Key>
+    <Property Name="codeStatus" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="status" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Presence" Relationship="sqlModel.FK__Presence__status__4E53A1AA" FromRole="statusN" ToRole="Presence" />
+    <NavigationProperty Name="Table" Relationship="sqlModel.FK__Table__statusToD__160F4887" FromRole="statusN" ToRole="Table" />
+  </EntityType>
+  <EntityType Name="techer">
+    <Key>
+      <PropertyRef Name="codeTecher" />
+    </Key>
+    <Property Name="codeTecher" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="permanent" Type="Boolean" />
+    <Property Name="hour_teken_month" Type="Int32" />
+    <NavigationProperty Name="Presence" Relationship="sqlModel.FK_Table_ToTable" FromRole="techer" ToRole="Presence" />
+    <NavigationProperty Name="Table" Relationship="sqlModel.FK__Table__codeTeche__17F790F9" FromRole="techer" ToRole="Table" />
+    <NavigationProperty Name="schedules" Relationship="sqlModel.FK__schedule__techer__0E6E26BF" FromRole="techer" ToRole="schedule" />
+  </EntityType>
+  <EntityContainer Name="sqlEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="class" EntityType="Self.class" />
+    <EntitySet Name="statusN" EntityType="Self.statusN" />
+    <EntitySet Name="techer" EntityType="Self.techer" />
+    <EntitySet Name="Presence" EntityType="sqlModel.Presence" />
+    <AssociationSet Name="FK__Presence__status__4E53A1AA" Association="sqlModel.FK__Presence__status__4E53A1AA">
+      <End Role="statusN" EntitySet="statusN" />
+      <End Role="Presence" EntitySet="Presence" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_ToTable" Association="sqlModel.FK_Table_ToTable">
+      <End Role="techer" EntitySet="techer" />
+      <End Role="Presence" EntitySet="Presence" />
+    </AssociationSet>
+    <EntitySet Name="subjectToClass" EntityType="sqlModel.subjectToClass" />
+    <EntitySet Name="Table" EntityType="sqlModel.Table" />
+    <AssociationSet Name="FK__Table__statusToD__160F4887" Association="sqlModel.FK__Table__statusToD__160F4887">
+      <End Role="statusN" EntitySet="statusN" />
+      <End Role="Table" EntitySet="Table" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Table__codeTeche__17F790F9" Association="sqlModel.FK__Table__codeTeche__17F790F9">
+      <End Role="techer" EntitySet="techer" />
+      <End Role="Table" EntitySet="Table" />
+    </AssociationSet>
+    <EntitySet Name="schedules" EntityType="sqlModel.schedule" />
+    <AssociationSet Name="FK__schedule__class__0F624AF8" Association="sqlModel.FK__schedule__class__0F624AF8">
+      <End Role="class" EntitySet="class" />
+      <End Role="schedule" EntitySet="schedules" />
+    </AssociationSet>
+    <AssociationSet Name="FK__schedule__subjec__1B9317B3" Association="sqlModel.FK__schedule__subjec__1B9317B3">
+      <End Role="subjectToClass" EntitySet="subjectToClass" />
+      <End Role="schedule" EntitySet="schedules" />
+    </AssociationSet>
+    <AssociationSet Name="FK__schedule__techer__0E6E26BF" Association="sqlModel.FK__schedule__techer__0E6E26BF">
+      <End Role="techer" EntitySet="techer" />
+      <End Role="schedule" EntitySet="schedules" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Presence">
+    <Key>
+      <PropertyRef Name="codePresence" />
+    </Key>
+    <Property Name="codePresence" Type="Int32" Nullable="false" />
+    <Property Name="codeTecher" Type="Int32" />
+    <Property Name="dateDay" Type="DateTime" Precision="0" />
+    <Property Name="mis_Hour" Type="Int32" />
+    <Property Name="statusToDay" Type="Int32" />
+    <Property Name="day" Type="Int32" />
+    <NavigationProperty Name="statusN" Relationship="sqlModel.FK__Presence__status__4E53A1AA" FromRole="Presence" ToRole="statusN" />
+    <NavigationProperty Name="techer" Relationship="sqlModel.FK_Table_ToTable" FromRole="Presence" ToRole="techer" />
+  </EntityType>
+  <Association Name="FK__Presence__status__4E53A1AA">
+    <End Type="sqlModel.statusN" Role="statusN" Multiplicity="0..1" />
+    <End Type="sqlModel.Presence" Role="Presence" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="statusN">
+        <PropertyRef Name="codeStatus" />
+      </Principal>
+      <Dependent Role="Presence">
+        <PropertyRef Name="statusToDay" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_ToTable">
+    <End Type="sqlModel.techer" Role="techer" Multiplicity="0..1" />
+    <End Type="sqlModel.Presence" Role="Presence" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="techer">
+        <PropertyRef Name="codeTecher" />
+      </Principal>
+      <Dependent Role="Presence">
+        <PropertyRef Name="codeTecher" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="subjectToClass">
+    <Key>
+      <PropertyRef Name="codeSubject" />
+    </Key>
+    <Property Name="codeSubject" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="group1" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="group2" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="schedules" Relationship="sqlModel.FK__schedule__subjec__1B9317B3" FromRole="subjectToClass" ToRole="schedule" />
+  </EntityType>
+  <EntityType Name="Table">
+    <Key>
+      <PropertyRef Name="codePresence" />
+    </Key>
+    <Property Name="codePresence" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="codeTecher" Type="Int32" Nullable="false" />
+    <Property Name="dateDay" Type="DateTime" Precision="0" />
+    <Property Name="mis_Hour" Type="Int32" />
+    <Property Name="statusToDay" Type="Int32" />
+    <NavigationProperty Name="statusN" Relationship="sqlModel.FK__Table__statusToD__160F4887" FromRole="Table" ToRole="statusN" />
+    <NavigationProperty Name="techer" Relationship="sqlModel.FK__Table__codeTeche__17F790F9" FromRole="Table" ToRole="techer" />
+  </EntityType>
+  <Association Name="FK__Table__statusToD__160F4887">
+    <End Type="sqlModel.statusN" Role="statusN" Multiplicity="0..1" />
+    <End Type="sqlModel.Table" Role="Table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="statusN">
+        <PropertyRef Name="codeStatus" />
+      </Principal>
+      <Dependent Role="Table">
+        <PropertyRef Name="statusToDay" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Table__codeTeche__17F790F9">
+    <End Type="sqlModel.techer" Role="techer" Multiplicity="1" />
+    <End Type="sqlModel.Table" Role="Table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="techer">
+        <PropertyRef Name="codeTecher" />
+      </Principal>
+      <Dependent Role="Table">
+        <PropertyRef Name="codeTecher" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="schedule">
+    <Key>
+      <PropertyRef Name="code_schedule" />
+    </Key>
+    <Property Name="code_schedule" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="hour_in_dey" Type="Int32" />
+    <Property Name="class" Type="Int32" />
+    <Property Name="groups" Type="Int32" />
+    <Property Name="subjectIn" Type="Int32" />
+    <Property Name="techer" Type="Int32" />
+    <Property Name="day" Type="Int32" />
+    <NavigationProperty Name="class1" Relationship="sqlModel.FK__schedule__class__0F624AF8" FromRole="schedule" ToRole="class" />
+    <NavigationProperty Name="subjectToClass" Relationship="sqlModel.FK__schedule__subjec__1B9317B3" FromRole="schedule" ToRole="subjectToClass" />
+    <NavigationProperty Name="techer1" Relationship="sqlModel.FK__schedule__techer__0E6E26BF" FromRole="schedule" ToRole="techer" />
+  </EntityType>
+  <Association Name="FK__schedule__class__0F624AF8">
+    <End Type="sqlModel.class" Role="class" Multiplicity="0..1" />
+    <End Type="sqlModel.schedule" Role="schedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="class">
+        <PropertyRef Name="codeClass" />
+      </Principal>
+      <Dependent Role="schedule">
+        <PropertyRef Name="class" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__schedule__subjec__1B9317B3">
+    <End Type="sqlModel.subjectToClass" Role="subjectToClass" Multiplicity="0..1" />
+    <End Type="sqlModel.schedule" Role="schedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="subjectToClass">
+        <PropertyRef Name="codeSubject" />
+      </Principal>
+      <Dependent Role="schedule">
+        <PropertyRef Name="subjectIn" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__schedule__techer__0E6E26BF">
+    <End Type="sqlModel.techer" Role="techer" Multiplicity="0..1" />
+    <End Type="sqlModel.schedule" Role="schedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="techer">
+        <PropertyRef Name="codeTecher" />
+      </Principal>
+      <Dependent Role="schedule">
+        <PropertyRef Name="techer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

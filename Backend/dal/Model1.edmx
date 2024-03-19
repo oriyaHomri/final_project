@@ -1,0 +1,792 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="VaadBayitModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CollectionVaad">
+          <Key>
+            <PropertyRef Name="IdCollectionVaad" />
+          </Key>
+          <Property Name="IdCollectionVaad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Details" Type="nvarchar" MaxLength="50" />
+          <Property Name="Amount" Type="nvarchar" MaxLength="50" />
+          <Property Name="Date" Type="date" />
+          <Property Name="DatePayed" Type="date" />
+          <Property Name="IdTenant" Type="int" />
+          <Property Name="IdFrequency" Type="int" />
+        </EntityType>
+        <EntityType Name="Expenses">
+          <Key>
+            <PropertyRef Name="IdExpense" />
+          </Key>
+          <Property Name="IdExpense" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Amount" Type="nvarchar" MaxLength="50" />
+          <Property Name="Date" Type="date" />
+          <Property Name="Details" Type="nvarchar" MaxLength="50" />
+          <Property Name="Receipt" Type="image" />
+        </EntityType>
+        <EntityType Name="Frequencies">
+          <Key>
+            <PropertyRef Name="IdFrequency" />
+          </Key>
+          <Property Name="IdFrequency" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TypeOfTasks" Type="int" />
+          <Property Name="StartDate" Type="date" />
+          <Property Name="Fixed" Type="bit" />
+          <Property Name="Details" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="FrequencyObject">
+          <Key>
+            <PropertyRef Name="IdFrequencyObject" />
+          </Key>
+          <Property Name="IdFrequencyObject" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FrequencyObject" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="FrequencyOperator">
+          <Key>
+            <PropertyRef Name="IdFrequencyOperator" />
+          </Key>
+          <Property Name="IdFrequencyOperator" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FrequencyOperator" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="FrequencyType">
+          <Key>
+            <PropertyRef Name="IdFrequencyType" />
+          </Key>
+          <Property Name="IdFrequencyType" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TypeOfFrequency" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Insertions">
+          <Key>
+            <PropertyRef Name="IdInsertion" />
+          </Key>
+          <Property Name="IdInsertion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Amount" Type="nvarchar" MaxLength="50" />
+          <Property Name="Date" Type="date" />
+          <Property Name="TenantId" Type="int" />
+        </EntityType>
+        <EntityType Name="Professionals">
+          <Key>
+            <PropertyRef Name="IdProfessional" />
+          </Key>
+          <Property Name="IdProfessional" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Mobile" Type="nvarchar" MaxLength="50" />
+          <Property Name="E-Mail" Type="nvarchar" MaxLength="50" />
+          <Property Name="TypeOfProfessional" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Tasks">
+          <Key>
+            <PropertyRef Name="IdTask" />
+          </Key>
+          <Property Name="IdTask" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TypeOfTask" Type="int" />
+          <Property Name="Date" Type="date" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="FixedBy" Type="int" />
+          <Property Name="FixedCost" Type="nvarchar" MaxLength="50" />
+          <Property Name="FixeDate" Type="date" />
+          <Property Name="IdExpense" Type="int" />
+          <Property Name="IdFrequency" Type="int" />
+        </EntityType>
+        <EntityType Name="Tenant">
+          <Key>
+            <PropertyRef Name="TenantCode" />
+          </Key>
+          <Property Name="TenantCode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Floor" Type="int" Nullable="false" />
+          <Property Name="NumOfApartment" Type="int" Nullable="false" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Mobile" Type="nvarchar" MaxLength="50" />
+          <Property Name="E-Mail" Type="nvarchar" MaxLength="50" />
+          <Property Name="Modifier" Type="nvarchar" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Tenants">
+          <Key>
+            <PropertyRef Name="TenantCode" />
+          </Key>
+          <Property Name="TenantCode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Floor" Type="int" Nullable="false" />
+          <Property Name="NumOfApartment" Type="int" Nullable="false" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Mobile" Type="nvarchar" MaxLength="50" />
+          <Property Name="E-Mail" Type="nvarchar" MaxLength="50" />
+          <Property Name="Modifier" Type="nvarchar" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TypeOfProfessionals">
+          <Key>
+            <PropertyRef Name="IdProfessional" />
+          </Key>
+          <Property Name="IdProfessional" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TypeOfProfessional" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TypeOfTasks">
+          <Key>
+            <PropertyRef Name="IdTypeOfTasks" />
+          </Key>
+          <Property Name="IdTypeOfTasks" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TypeOfTask" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_CollectionVaad_ToTable">
+          <End Role="Tenants" Type="Self.Tenants" Multiplicity="0..1" />
+          <End Role="CollectionVaad" Type="Self.CollectionVaad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tenants">
+              <PropertyRef Name="TenantCode" />
+            </Principal>
+            <Dependent Role="CollectionVaad">
+              <PropertyRef Name="IdTenant" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CollectionVaad_ToTable_1">
+          <End Role="Frequencies" Type="Self.Frequencies" Multiplicity="0..1" />
+          <End Role="CollectionVaad" Type="Self.CollectionVaad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Frequencies">
+              <PropertyRef Name="IdFrequency" />
+            </Principal>
+            <Dependent Role="CollectionVaad">
+              <PropertyRef Name="IdFrequency" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Frequencies_ToTable">
+          <End Role="TypeOfTasks" Type="Self.TypeOfTasks" Multiplicity="0..1" />
+          <End Role="Frequencies" Type="Self.Frequencies" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypeOfTasks">
+              <PropertyRef Name="IdTypeOfTasks" />
+            </Principal>
+            <Dependent Role="Frequencies">
+              <PropertyRef Name="TypeOfTasks" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Insertions_ToTable">
+          <End Role="Tenants" Type="Self.Tenants" Multiplicity="0..1" />
+          <End Role="Insertions" Type="Self.Insertions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tenants">
+              <PropertyRef Name="TenantCode" />
+            </Principal>
+            <Dependent Role="Insertions">
+              <PropertyRef Name="TenantId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Professionals_ToTable">
+          <End Role="TypeOfProfessionals" Type="Self.TypeOfProfessionals" Multiplicity="1" />
+          <End Role="Professionals" Type="Self.Professionals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypeOfProfessionals">
+              <PropertyRef Name="IdProfessional" />
+            </Principal>
+            <Dependent Role="Professionals">
+              <PropertyRef Name="TypeOfProfessional" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tasks_ToTable">
+          <End Role="TypeOfTasks" Type="Self.TypeOfTasks" Multiplicity="0..1" />
+          <End Role="Tasks" Type="Self.Tasks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypeOfTasks">
+              <PropertyRef Name="IdTypeOfTasks" />
+            </Principal>
+            <Dependent Role="Tasks">
+              <PropertyRef Name="TypeOfTask" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tasks_ToTable_1">
+          <End Role="Professionals" Type="Self.Professionals" Multiplicity="0..1" />
+          <End Role="Tasks" Type="Self.Tasks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Professionals">
+              <PropertyRef Name="IdProfessional" />
+            </Principal>
+            <Dependent Role="Tasks">
+              <PropertyRef Name="FixedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tasks_ToTable_2">
+          <End Role="Expenses" Type="Self.Expenses" Multiplicity="0..1" />
+          <End Role="Tasks" Type="Self.Tasks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Expenses">
+              <PropertyRef Name="IdExpense" />
+            </Principal>
+            <Dependent Role="Tasks">
+              <PropertyRef Name="IdExpense" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tasks_ToTable_3">
+          <End Role="Frequencies" Type="Self.Frequencies" Multiplicity="0..1" />
+          <End Role="Tasks" Type="Self.Tasks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Frequencies">
+              <PropertyRef Name="IdFrequency" />
+            </Principal>
+            <Dependent Role="Tasks">
+              <PropertyRef Name="IdFrequency" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="VaadBayitModelStoreContainer">
+          <EntitySet Name="CollectionVaad" EntityType="Self.CollectionVaad" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Expenses" EntityType="Self.Expenses" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Frequencies" EntityType="Self.Frequencies" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FrequencyObject" EntityType="Self.FrequencyObject" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FrequencyOperator" EntityType="Self.FrequencyOperator" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FrequencyType" EntityType="Self.FrequencyType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Insertions" EntityType="Self.Insertions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Professionals" EntityType="Self.Professionals" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tasks" EntityType="Self.Tasks" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tenant" EntityType="Self.Tenant" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tenants" EntityType="Self.Tenants" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TypeOfProfessionals" EntityType="Self.TypeOfProfessionals" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TypeOfTasks" EntityType="Self.TypeOfTasks" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_CollectionVaad_ToTable" Association="Self.FK_CollectionVaad_ToTable">
+            <End Role="Tenants" EntitySet="Tenants" />
+            <End Role="CollectionVaad" EntitySet="CollectionVaad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CollectionVaad_ToTable_1" Association="Self.FK_CollectionVaad_ToTable_1">
+            <End Role="Frequencies" EntitySet="Frequencies" />
+            <End Role="CollectionVaad" EntitySet="CollectionVaad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Frequencies_ToTable" Association="Self.FK_Frequencies_ToTable">
+            <End Role="TypeOfTasks" EntitySet="TypeOfTasks" />
+            <End Role="Frequencies" EntitySet="Frequencies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Insertions_ToTable" Association="Self.FK_Insertions_ToTable">
+            <End Role="Tenants" EntitySet="Tenants" />
+            <End Role="Insertions" EntitySet="Insertions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Professionals_ToTable" Association="Self.FK_Professionals_ToTable">
+            <End Role="TypeOfProfessionals" EntitySet="TypeOfProfessionals" />
+            <End Role="Professionals" EntitySet="Professionals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tasks_ToTable" Association="Self.FK_Tasks_ToTable">
+            <End Role="TypeOfTasks" EntitySet="TypeOfTasks" />
+            <End Role="Tasks" EntitySet="Tasks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tasks_ToTable_1" Association="Self.FK_Tasks_ToTable_1">
+            <End Role="Professionals" EntitySet="Professionals" />
+            <End Role="Tasks" EntitySet="Tasks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tasks_ToTable_2" Association="Self.FK_Tasks_ToTable_2">
+            <End Role="Expenses" EntitySet="Expenses" />
+            <End Role="Tasks" EntitySet="Tasks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tasks_ToTable_3" Association="Self.FK_Tasks_ToTable_3">
+            <End Role="Frequencies" EntitySet="Frequencies" />
+            <End Role="Tasks" EntitySet="Tasks" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="VaadBayitModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CollectionVaad">
+          <Key>
+            <PropertyRef Name="IdCollectionVaad" />
+          </Key>
+          <Property Name="IdCollectionVaad" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Details" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Amount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="DatePayed" Type="DateTime" Precision="0" />
+          <Property Name="IdTenant" Type="Int32" />
+          <Property Name="IdFrequency" Type="Int32" />
+          <NavigationProperty Name="Tenants" Relationship="Self.FK_CollectionVaad_ToTable" FromRole="CollectionVaad" ToRole="Tenants" />
+          <NavigationProperty Name="Frequencies" Relationship="Self.FK_CollectionVaad_ToTable_1" FromRole="CollectionVaad" ToRole="Frequencies" />
+        </EntityType>
+        <EntityType Name="Expenses">
+          <Key>
+            <PropertyRef Name="IdExpense" />
+          </Key>
+          <Property Name="IdExpense" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Amount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="Details" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Receipt" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="Tasks" Relationship="Self.FK_Tasks_ToTable_2" FromRole="Expenses" ToRole="Tasks" />
+        </EntityType>
+        <EntityType Name="Frequencies">
+          <Key>
+            <PropertyRef Name="IdFrequency" />
+          </Key>
+          <Property Name="IdFrequency" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TypeOfTasks" Type="Int32" />
+          <Property Name="StartDate" Type="DateTime" Precision="0" />
+          <Property Name="Fixed" Type="Boolean" />
+          <Property Name="Details" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CollectionVaad" Relationship="Self.FK_CollectionVaad_ToTable_1" FromRole="Frequencies" ToRole="CollectionVaad" />
+          <NavigationProperty Name="TypeOfTasks1" Relationship="Self.FK_Frequencies_ToTable" FromRole="Frequencies" ToRole="TypeOfTasks" />
+          <NavigationProperty Name="Tasks" Relationship="Self.FK_Tasks_ToTable_3" FromRole="Frequencies" ToRole="Tasks" />
+        </EntityType>
+        <EntityType Name="FrequencyObject">
+          <Key>
+            <PropertyRef Name="IdFrequencyObject" />
+          </Key>
+          <Property Name="IdFrequencyObject" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FrequencyObject1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="FrequencyOperator">
+          <Key>
+            <PropertyRef Name="IdFrequencyOperator" />
+          </Key>
+          <Property Name="IdFrequencyOperator" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FrequencyOperator1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="FrequencyType">
+          <Key>
+            <PropertyRef Name="IdFrequencyType" />
+          </Key>
+          <Property Name="IdFrequencyType" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TypeOfFrequency" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Insertions">
+          <Key>
+            <PropertyRef Name="IdInsertion" />
+          </Key>
+          <Property Name="IdInsertion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Amount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="TenantId" Type="Int32" />
+          <NavigationProperty Name="Tenants" Relationship="Self.FK_Insertions_ToTable" FromRole="Insertions" ToRole="Tenants" />
+        </EntityType>
+        <EntityType Name="Professionals">
+          <Key>
+            <PropertyRef Name="IdProfessional" />
+          </Key>
+          <Property Name="IdProfessional" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="E_Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TypeOfProfessional" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="TypeOfProfessionals" Relationship="Self.FK_Professionals_ToTable" FromRole="Professionals" ToRole="TypeOfProfessionals" />
+          <NavigationProperty Name="Tasks" Relationship="Self.FK_Tasks_ToTable_1" FromRole="Professionals" ToRole="Tasks" />
+        </EntityType>
+        <EntityType Name="Tasks">
+          <Key>
+            <PropertyRef Name="IdTask" />
+          </Key>
+          <Property Name="IdTask" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TypeOfTask" Type="Int32" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FixedBy" Type="Int32" />
+          <Property Name="FixedCost" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FixeDate" Type="DateTime" Precision="0" />
+          <Property Name="IdExpense" Type="Int32" />
+          <Property Name="IdFrequency" Type="Int32" />
+          <NavigationProperty Name="Expenses" Relationship="Self.FK_Tasks_ToTable_2" FromRole="Tasks" ToRole="Expenses" />
+          <NavigationProperty Name="Frequencies" Relationship="Self.FK_Tasks_ToTable_3" FromRole="Tasks" ToRole="Frequencies" />
+          <NavigationProperty Name="Professionals" Relationship="Self.FK_Tasks_ToTable_1" FromRole="Tasks" ToRole="Professionals" />
+          <NavigationProperty Name="TypeOfTasks" Relationship="Self.FK_Tasks_ToTable" FromRole="Tasks" ToRole="TypeOfTasks" />
+        </EntityType>
+        <EntityType Name="Tenant">
+          <Key>
+            <PropertyRef Name="TenantCode" />
+          </Key>
+          <Property Name="TenantCode" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Floor" Type="Int32" Nullable="false" />
+          <Property Name="NumOfApartment" Type="Int32" Nullable="false" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="E_Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Modifier" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Tenants">
+          <Key>
+            <PropertyRef Name="TenantCode" />
+          </Key>
+          <Property Name="TenantCode" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Floor" Type="Int32" Nullable="false" />
+          <Property Name="NumOfApartment" Type="Int32" Nullable="false" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="E_Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Modifier" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CollectionVaad" Relationship="Self.FK_CollectionVaad_ToTable" FromRole="Tenants" ToRole="CollectionVaad" />
+          <NavigationProperty Name="Insertions" Relationship="Self.FK_Insertions_ToTable" FromRole="Tenants" ToRole="Insertions" />
+        </EntityType>
+        <EntityType Name="TypeOfProfessionals">
+          <Key>
+            <PropertyRef Name="IdProfessional" />
+          </Key>
+          <Property Name="IdProfessional" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TypeOfProfessional" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Professionals" Relationship="Self.FK_Professionals_ToTable" FromRole="TypeOfProfessionals" ToRole="Professionals" />
+        </EntityType>
+        <EntityType Name="TypeOfTasks">
+          <Key>
+            <PropertyRef Name="IdTypeOfTasks" />
+          </Key>
+          <Property Name="IdTypeOfTasks" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TypeOfTask" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Frequencies" Relationship="Self.FK_Frequencies_ToTable" FromRole="TypeOfTasks" ToRole="Frequencies" />
+          <NavigationProperty Name="Tasks" Relationship="Self.FK_Tasks_ToTable" FromRole="TypeOfTasks" ToRole="Tasks" />
+        </EntityType>
+        <Association Name="FK_CollectionVaad_ToTable">
+          <End Role="Tenants" Type="Self.Tenants" Multiplicity="0..1" />
+          <End Role="CollectionVaad" Type="Self.CollectionVaad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tenants">
+              <PropertyRef Name="TenantCode" />
+            </Principal>
+            <Dependent Role="CollectionVaad">
+              <PropertyRef Name="IdTenant" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CollectionVaad_ToTable_1">
+          <End Role="Frequencies" Type="Self.Frequencies" Multiplicity="0..1" />
+          <End Role="CollectionVaad" Type="Self.CollectionVaad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Frequencies">
+              <PropertyRef Name="IdFrequency" />
+            </Principal>
+            <Dependent Role="CollectionVaad">
+              <PropertyRef Name="IdFrequency" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tasks_ToTable_2">
+          <End Role="Expenses" Type="Self.Expenses" Multiplicity="0..1" />
+          <End Role="Tasks" Type="Self.Tasks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Expenses">
+              <PropertyRef Name="IdExpense" />
+            </Principal>
+            <Dependent Role="Tasks">
+              <PropertyRef Name="IdExpense" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Frequencies_ToTable">
+          <End Role="TypeOfTasks" Type="Self.TypeOfTasks" Multiplicity="0..1" />
+          <End Role="Frequencies" Type="Self.Frequencies" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypeOfTasks">
+              <PropertyRef Name="IdTypeOfTasks" />
+            </Principal>
+            <Dependent Role="Frequencies">
+              <PropertyRef Name="TypeOfTasks" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tasks_ToTable_3">
+          <End Role="Frequencies" Type="Self.Frequencies" Multiplicity="0..1" />
+          <End Role="Tasks" Type="Self.Tasks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Frequencies">
+              <PropertyRef Name="IdFrequency" />
+            </Principal>
+            <Dependent Role="Tasks">
+              <PropertyRef Name="IdFrequency" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Insertions_ToTable">
+          <End Role="Tenants" Type="Self.Tenants" Multiplicity="0..1" />
+          <End Role="Insertions" Type="Self.Insertions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tenants">
+              <PropertyRef Name="TenantCode" />
+            </Principal>
+            <Dependent Role="Insertions">
+              <PropertyRef Name="TenantId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Professionals_ToTable">
+          <End Role="TypeOfProfessionals" Type="Self.TypeOfProfessionals" Multiplicity="1" />
+          <End Role="Professionals" Type="Self.Professionals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypeOfProfessionals">
+              <PropertyRef Name="IdProfessional" />
+            </Principal>
+            <Dependent Role="Professionals">
+              <PropertyRef Name="TypeOfProfessional" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tasks_ToTable_1">
+          <End Role="Professionals" Type="Self.Professionals" Multiplicity="0..1" />
+          <End Role="Tasks" Type="Self.Tasks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Professionals">
+              <PropertyRef Name="IdProfessional" />
+            </Principal>
+            <Dependent Role="Tasks">
+              <PropertyRef Name="FixedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tasks_ToTable">
+          <End Role="TypeOfTasks" Type="Self.TypeOfTasks" Multiplicity="0..1" />
+          <End Role="Tasks" Type="Self.Tasks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypeOfTasks">
+              <PropertyRef Name="IdTypeOfTasks" />
+            </Principal>
+            <Dependent Role="Tasks">
+              <PropertyRef Name="TypeOfTask" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="VaadBayitEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CollectionVaad" EntityType="Self.CollectionVaad" />
+          <EntitySet Name="Expenses" EntityType="Self.Expenses" />
+          <EntitySet Name="Frequencies" EntityType="Self.Frequencies" />
+          <EntitySet Name="FrequencyObject" EntityType="Self.FrequencyObject" />
+          <EntitySet Name="FrequencyOperator" EntityType="Self.FrequencyOperator" />
+          <EntitySet Name="FrequencyType" EntityType="Self.FrequencyType" />
+          <EntitySet Name="Insertions" EntityType="Self.Insertions" />
+          <EntitySet Name="Professionals" EntityType="Self.Professionals" />
+          <EntitySet Name="Tasks" EntityType="Self.Tasks" />
+          <EntitySet Name="Tenant" EntityType="Self.Tenant" />
+          <EntitySet Name="Tenants" EntityType="Self.Tenants" />
+          <EntitySet Name="TypeOfProfessionals" EntityType="Self.TypeOfProfessionals" />
+          <EntitySet Name="TypeOfTasks" EntityType="Self.TypeOfTasks" />
+          <AssociationSet Name="FK_CollectionVaad_ToTable" Association="Self.FK_CollectionVaad_ToTable">
+            <End Role="Tenants" EntitySet="Tenants" />
+            <End Role="CollectionVaad" EntitySet="CollectionVaad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CollectionVaad_ToTable_1" Association="Self.FK_CollectionVaad_ToTable_1">
+            <End Role="Frequencies" EntitySet="Frequencies" />
+            <End Role="CollectionVaad" EntitySet="CollectionVaad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tasks_ToTable_2" Association="Self.FK_Tasks_ToTable_2">
+            <End Role="Expenses" EntitySet="Expenses" />
+            <End Role="Tasks" EntitySet="Tasks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Frequencies_ToTable" Association="Self.FK_Frequencies_ToTable">
+            <End Role="TypeOfTasks" EntitySet="TypeOfTasks" />
+            <End Role="Frequencies" EntitySet="Frequencies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tasks_ToTable_3" Association="Self.FK_Tasks_ToTable_3">
+            <End Role="Frequencies" EntitySet="Frequencies" />
+            <End Role="Tasks" EntitySet="Tasks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Insertions_ToTable" Association="Self.FK_Insertions_ToTable">
+            <End Role="Tenants" EntitySet="Tenants" />
+            <End Role="Insertions" EntitySet="Insertions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Professionals_ToTable" Association="Self.FK_Professionals_ToTable">
+            <End Role="TypeOfProfessionals" EntitySet="TypeOfProfessionals" />
+            <End Role="Professionals" EntitySet="Professionals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tasks_ToTable_1" Association="Self.FK_Tasks_ToTable_1">
+            <End Role="Professionals" EntitySet="Professionals" />
+            <End Role="Tasks" EntitySet="Tasks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tasks_ToTable" Association="Self.FK_Tasks_ToTable">
+            <End Role="TypeOfTasks" EntitySet="TypeOfTasks" />
+            <End Role="Tasks" EntitySet="Tasks" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="VaadBayitModelStoreContainer" CdmEntityContainer="VaadBayitEntities">
+          <EntitySetMapping Name="CollectionVaad">
+            <EntityTypeMapping TypeName="VaadBayitModel.CollectionVaad">
+              <MappingFragment StoreEntitySet="CollectionVaad">
+                <ScalarProperty Name="IdCollectionVaad" ColumnName="IdCollectionVaad" />
+                <ScalarProperty Name="Details" ColumnName="Details" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="DatePayed" ColumnName="DatePayed" />
+                <ScalarProperty Name="IdTenant" ColumnName="IdTenant" />
+                <ScalarProperty Name="IdFrequency" ColumnName="IdFrequency" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Expenses">
+            <EntityTypeMapping TypeName="VaadBayitModel.Expenses">
+              <MappingFragment StoreEntitySet="Expenses">
+                <ScalarProperty Name="IdExpense" ColumnName="IdExpense" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Details" ColumnName="Details" />
+                <ScalarProperty Name="Receipt" ColumnName="Receipt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Frequencies">
+            <EntityTypeMapping TypeName="VaadBayitModel.Frequencies">
+              <MappingFragment StoreEntitySet="Frequencies">
+                <ScalarProperty Name="IdFrequency" ColumnName="IdFrequency" />
+                <ScalarProperty Name="TypeOfTasks" ColumnName="TypeOfTasks" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="Fixed" ColumnName="Fixed" />
+                <ScalarProperty Name="Details" ColumnName="Details" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FrequencyObject">
+            <EntityTypeMapping TypeName="VaadBayitModel.FrequencyObject">
+              <MappingFragment StoreEntitySet="FrequencyObject">
+                <ScalarProperty Name="IdFrequencyObject" ColumnName="IdFrequencyObject" />
+                <ScalarProperty Name="FrequencyObject1" ColumnName="FrequencyObject" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FrequencyOperator">
+            <EntityTypeMapping TypeName="VaadBayitModel.FrequencyOperator">
+              <MappingFragment StoreEntitySet="FrequencyOperator">
+                <ScalarProperty Name="IdFrequencyOperator" ColumnName="IdFrequencyOperator" />
+                <ScalarProperty Name="FrequencyOperator1" ColumnName="FrequencyOperator" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FrequencyType">
+            <EntityTypeMapping TypeName="VaadBayitModel.FrequencyType">
+              <MappingFragment StoreEntitySet="FrequencyType">
+                <ScalarProperty Name="IdFrequencyType" ColumnName="IdFrequencyType" />
+                <ScalarProperty Name="TypeOfFrequency" ColumnName="TypeOfFrequency" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Insertions">
+            <EntityTypeMapping TypeName="VaadBayitModel.Insertions">
+              <MappingFragment StoreEntitySet="Insertions">
+                <ScalarProperty Name="IdInsertion" ColumnName="IdInsertion" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="TenantId" ColumnName="TenantId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Professionals">
+            <EntityTypeMapping TypeName="VaadBayitModel.Professionals">
+              <MappingFragment StoreEntitySet="Professionals">
+                <ScalarProperty Name="IdProfessional" ColumnName="IdProfessional" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="E_Mail" ColumnName="E-Mail" />
+                <ScalarProperty Name="TypeOfProfessional" ColumnName="TypeOfProfessional" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tasks">
+            <EntityTypeMapping TypeName="VaadBayitModel.Tasks">
+              <MappingFragment StoreEntitySet="Tasks">
+                <ScalarProperty Name="IdTask" ColumnName="IdTask" />
+                <ScalarProperty Name="TypeOfTask" ColumnName="TypeOfTask" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="FixedBy" ColumnName="FixedBy" />
+                <ScalarProperty Name="FixedCost" ColumnName="FixedCost" />
+                <ScalarProperty Name="FixeDate" ColumnName="FixeDate" />
+                <ScalarProperty Name="IdExpense" ColumnName="IdExpense" />
+                <ScalarProperty Name="IdFrequency" ColumnName="IdFrequency" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tenant">
+            <EntityTypeMapping TypeName="VaadBayitModel.Tenant">
+              <MappingFragment StoreEntitySet="Tenant">
+                <ScalarProperty Name="TenantCode" ColumnName="TenantCode" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Floor" ColumnName="Floor" />
+                <ScalarProperty Name="NumOfApartment" ColumnName="NumOfApartment" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="E_Mail" ColumnName="E-Mail" />
+                <ScalarProperty Name="Modifier" ColumnName="Modifier" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tenants">
+            <EntityTypeMapping TypeName="VaadBayitModel.Tenants">
+              <MappingFragment StoreEntitySet="Tenants">
+                <ScalarProperty Name="TenantCode" ColumnName="TenantCode" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Floor" ColumnName="Floor" />
+                <ScalarProperty Name="NumOfApartment" ColumnName="NumOfApartment" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="E_Mail" ColumnName="E-Mail" />
+                <ScalarProperty Name="Modifier" ColumnName="Modifier" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TypeOfProfessionals">
+            <EntityTypeMapping TypeName="VaadBayitModel.TypeOfProfessionals">
+              <MappingFragment StoreEntitySet="TypeOfProfessionals">
+                <ScalarProperty Name="IdProfessional" ColumnName="IdProfessional" />
+                <ScalarProperty Name="TypeOfProfessional" ColumnName="TypeOfProfessional" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TypeOfTasks">
+            <EntityTypeMapping TypeName="VaadBayitModel.TypeOfTasks">
+              <MappingFragment StoreEntitySet="TypeOfTasks">
+                <ScalarProperty Name="IdTypeOfTasks" ColumnName="IdTypeOfTasks" />
+                <ScalarProperty Name="TypeOfTask" ColumnName="TypeOfTask" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

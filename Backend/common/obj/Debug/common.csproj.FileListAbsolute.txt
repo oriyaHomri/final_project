@@ -1,0 +1,86 @@
+W:\פרויקט סיום\FinalProject\common\bin\Debug\common.dll
+W:\פרויקט סיום\FinalProject\common\bin\Debug\common.pdb
+W:\פרויקט סיום\FinalProject\common\obj\Debug\common.csproj.CoreCompileInputs.cache
+W:\פרויקט סיום\FinalProject\common\obj\Debug\common.dll
+W:\פרויקט סיום\FinalProject\common\obj\Debug\common.pdb
+H:\תשעט\פרויקט סיום\FinalProject\common\bin\Debug\common.dll
+H:\תשעט\פרויקט סיום\FinalProject\common\bin\Debug\common.pdb
+H:\תשעט\פרויקט סיום\FinalProject\common\obj\Debug\common.csproj.CoreCompileInputs.cache
+H:\תשעט\פרויקט סיום\FinalProject\common\obj\Debug\common.dll
+H:\תשעט\פרויקט סיום\FinalProject\common\obj\Debug\common.pdb
+H:\תשעט\פרויקט סיום\FinalProject\common\obj\Debug\common.csprojResolveAssemblyReference.cache
+H:\project\פרויקט סיום\FinalProject\common\bin\Debug\common.dll
+H:\project\פרויקט סיום\FinalProject\common\bin\Debug\common.pdb
+H:\project\פרויקט סיום\FinalProject\common\obj\Debug\common.csprojResolveAssemblyReference.cache
+H:\project\פרויקט סיום\FinalProject\common\obj\Debug\common.csproj.CoreCompileInputs.cache
+H:\project\פרויקט סיום\FinalProject\common\obj\Debug\common.dll
+H:\project\פרויקט סיום\FinalProject\common\obj\Debug\common.pdb
+D:\פרויקט סיום\FinalProject\common\bin\Debug\common.dll
+D:\פרויקט סיום\FinalProject\common\bin\Debug\common.pdb
+D:\פרויקט סיום\FinalProject\common\obj\Debug\common.csproj.CoreCompileInputs.cache
+D:\פרויקט סיום\FinalProject\common\obj\Debug\common.dll
+D:\פרויקט סיום\FinalProject\common\obj\Debug\common.pdb
+E:\פרויקט סיום\FinalProject\common\bin\Debug\common.dll
+E:\פרויקט סיום\FinalProject\common\bin\Debug\common.pdb
+E:\פרויקט סיום\FinalProject\common\obj\Debug\common.csproj.CoreCompileInputs.cache
+E:\פרויקט סיום\FinalProject\common\obj\Debug\common.dll
+E:\פרויקט סיום\FinalProject\common\obj\Debug\common.pdb
+C:\Users\owner\Documents\GitHub\רות\פרויקט סיום\FinalProject\common\bin\Debug\common.dll
+C:\Users\owner\Documents\GitHub\רות\פרויקט סיום\FinalProject\common\bin\Debug\common.pdb
+C:\Users\owner\Documents\GitHub\רות\פרויקט סיום\FinalProject\common\obj\Debug\common.csproj.CoreCompileInputs.cache
+C:\Users\owner\Documents\GitHub\רות\פרויקט סיום\FinalProject\common\obj\Debug\common.dll
+C:\Users\owner\Documents\GitHub\רות\פרויקט סיום\FinalProject\common\obj\Debug\common.pdb
+C:\Users\owner\Documents\GitHub\AttendanceSeminar\Backend\common\bin\Debug\common.dll
+C:\Users\owner\Documents\GitHub\AttendanceSeminar\Backend\common\bin\Debug\common.pdb
+C:\Users\owner\Documents\GitHub\AttendanceSeminar\Backend\common\obj\Debug\common.csprojAssemblyReference.cache
+C:\Users\owner\Documents\GitHub\AttendanceSeminar\Backend\common\obj\Debug\common.csproj.CoreCompileInputs.cache
+C:\Users\owner\Documents\GitHub\AttendanceSeminar\Backend\common\obj\Debug\common.dll
+C:\Users\owner\Documents\GitHub\AttendanceSeminar\Backend\common\obj\Debug\common.pdb
+D:\פרויקט מעוצב\AttendanceSeminar\Backend\common\bin\Debug\common.dll
+D:\פרויקט מעוצב\AttendanceSeminar\Backend\common\bin\Debug\common.pdb
+D:\פרויקט מעוצב\AttendanceSeminar\Backend\common\obj\Debug\common.csprojAssemblyReference.cache
+D:\פרויקט מעוצב\AttendanceSeminar\Backend\common\obj\Debug\common.csproj.CoreCompileInputs.cache
+D:\פרויקט מעוצב\AttendanceSeminar\Backend\common\obj\Debug\common.dll
+D:\פרויקט מעוצב\AttendanceSeminar\Backend\common\obj\Debug\common.pdb
+Z:\ציבורי\פרויקט מעוצב\AttendanceSeminar\Backend\common\bin\Debug\common.dll
+Z:\ציבורי\פרויקט מעוצב\AttendanceSeminar\Backend\common\bin\Debug\common.pdb
+Z:\ציבורי\פרויקט מעוצב\AttendanceSeminar\Backend\common\obj\Debug\common.csprojAssemblyReference.cache
+Z:\ציבורי\פרויקט מעוצב\AttendanceSeminar\Backend\common\obj\Debug\common.csproj.CoreCompileInputs.cache
+Z:\ציבורי\פרויקט מעוצב\AttendanceSeminar\Backend\common\obj\Debug\common.dll
+Z:\ציבורי\פרויקט מעוצב\AttendanceSeminar\Backend\common\obj\Debug\common.pdb
+C:\Users\PC\Pictures\פרויקט מעוצב\AttendanceSeminar\Backend\common\bin\Debug\common.dll
+C:\Users\PC\Pictures\פרויקט מעוצב\AttendanceSeminar\Backend\common\bin\Debug\common.pdb
+C:\Users\PC\Pictures\פרויקט מעוצב\AttendanceSeminar\Backend\common\obj\Debug\common.csproj.CoreCompileInputs.cache
+C:\Users\PC\Pictures\פרויקט מעוצב\AttendanceSeminar\Backend\common\obj\Debug\common.dll
+C:\Users\PC\Pictures\פרויקט מעוצב\AttendanceSeminar\Backend\common\obj\Debug\common.pdb
+C:\Users\PC\Pictures\פרויקט מעוצב\AttendanceSeminar\Backend\common\obj\Debug\common.csprojAssemblyReference.cache
+F:\פרויקטים\פרויקט מעוצב\AttendanceSeminar\Backend\common\bin\Debug\common.dll
+F:\פרויקטים\פרויקט מעוצב\AttendanceSeminar\Backend\common\bin\Debug\common.pdb
+F:\פרויקטים\פרויקט מעוצב\AttendanceSeminar\Backend\common\obj\Debug\common.csprojAssemblyReference.cache
+F:\פרויקטים\פרויקט מעוצב\AttendanceSeminar\Backend\common\obj\Debug\common.csproj.CoreCompileInputs.cache
+F:\פרויקטים\פרויקט מעוצב\AttendanceSeminar\Backend\common\obj\Debug\common.dll
+F:\פרויקטים\פרויקט מעוצב\AttendanceSeminar\Backend\common\obj\Debug\common.pdb
+C:\Users\Public\פרויקטים\פרויקט מעוצב\AttendanceSeminar\Backend\common\bin\Debug\common.dll
+C:\Users\Public\פרויקטים\פרויקט מעוצב\AttendanceSeminar\Backend\common\bin\Debug\common.pdb
+C:\Users\Public\פרויקטים\פרויקט מעוצב\AttendanceSeminar\Backend\common\obj\Debug\common.csprojAssemblyReference.cache
+C:\Users\Public\פרויקטים\פרויקט מעוצב\AttendanceSeminar\Backend\common\obj\Debug\common.csproj.CoreCompileInputs.cache
+C:\Users\Public\פרויקטים\פרויקט מעוצב\AttendanceSeminar\Backend\common\obj\Debug\common.dll
+C:\Users\Public\פרויקטים\פרויקט מעוצב\AttendanceSeminar\Backend\common\obj\Debug\common.pdb
+C:\Users\Public\פרויקטים\פרויקט אלישבע וליבי\AttendanceSeminar\Backend2\Backend\common\obj\Debug\common.csprojAssemblyReference.cache
+C:\Users\Public\פרויקטים\פרויקט אלישבע וליבי\AttendanceSeminar\Backend2\Backend\common\obj\Debug\common.csproj.CoreCompileInputs.cache
+C:\Users\Public\פרויקטים\פרויקט אלישבע וליבי\AttendanceSeminar\Backend2\Backend\common\obj\Debug\common.dll
+C:\Users\Public\פרויקטים\פרויקט אלישבע וליבי\AttendanceSeminar\Backend2\Backend\common\obj\Debug\common.pdb
+C:\Users\Public\פרויקטים\פרויקט אלישבע וליבי\AttendanceSeminar\Backend2\Backend\common\bin\Debug\common.dll
+C:\Users\Public\פרויקטים\פרויקט אלישבע וליבי\AttendanceSeminar\Backend2\Backend\common\bin\Debug\common.pdb
+C:\Users\DELL\Documents\חומרים\פרויקטים\פרויקט אוריה ומיכל\AttendanceSeminar\Backend2\Backend\common\bin\Debug\common.dll
+C:\Users\DELL\Documents\חומרים\פרויקטים\פרויקט אוריה ומיכל\AttendanceSeminar\Backend2\Backend\common\bin\Debug\common.pdb
+C:\Users\DELL\Documents\חומרים\פרויקטים\פרויקט אוריה ומיכל\AttendanceSeminar\Backend2\Backend\common\obj\Debug\common.csprojAssemblyReference.cache
+C:\Users\DELL\Documents\חומרים\פרויקטים\פרויקט אוריה ומיכל\AttendanceSeminar\Backend2\Backend\common\obj\Debug\common.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Documents\חומרים\פרויקטים\פרויקט אוריה ומיכל\AttendanceSeminar\Backend2\Backend\common\obj\Debug\common.dll
+C:\Users\DELL\Documents\חומרים\פרויקטים\פרויקט אוריה ומיכל\AttendanceSeminar\Backend2\Backend\common\obj\Debug\common.pdb
+C:\Users\WIN 10\שולחן העבודה\Homeowner Association\פרוייקט גמר\Backend2\Backend\common\bin\Debug\common.dll
+C:\Users\WIN 10\שולחן העבודה\Homeowner Association\פרוייקט גמר\Backend2\Backend\common\bin\Debug\common.pdb
+C:\Users\WIN 10\שולחן העבודה\Homeowner Association\פרוייקט גמר\Backend2\Backend\common\obj\Debug\common.csprojAssemblyReference.cache
+C:\Users\WIN 10\שולחן העבודה\Homeowner Association\פרוייקט גמר\Backend2\Backend\common\obj\Debug\common.csproj.CoreCompileInputs.cache
+C:\Users\WIN 10\שולחן העבודה\Homeowner Association\פרוייקט גמר\Backend2\Backend\common\obj\Debug\common.dll
+C:\Users\WIN 10\שולחן העבודה\Homeowner Association\פרוייקט גמר\Backend2\Backend\common\obj\Debug\common.pdb
